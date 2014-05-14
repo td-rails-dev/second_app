@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
-gem 'rails_12factor', group :production do
+gem 'rails_12factor', group: :production
+
+group :production do
   gem 'pg'
   gem 'unicorn' # make sure you follow installation instructions for this gem
 end
