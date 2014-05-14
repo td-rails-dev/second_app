@@ -2,17 +2,19 @@ source 'https://rubygems.org'
 ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
-group :production do
+gem 'rails_12factor', group :production do
   gem 'pg'
   gem 'unicorn' # make sure you follow installation instructions for this gem
-  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
+
+gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+
 group :development, :test do
   gem 'sqlite3'
 end
 
-gem 'rails_12factor'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
